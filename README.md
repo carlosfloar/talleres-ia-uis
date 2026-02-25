@@ -7,7 +7,7 @@ Taller introductorio de **Deep Learning** aplicado a la detección de enfermedad
 Este repositorio contiene todo lo necesario para aprender Deep Learning desde cero:
 
 ### 1. **Notebooks teóricos y prácticos** (`hojas/`)
-- `taller_cnn_plantas_colab.ipynb` - Introducción visual a las CNNs (1 hora)
+- `taller_cnn_plantas_colab.ipynb` - Introducción visual a las CNNs (30 min)
 - `entrenamiento_cnn_tomate.ipynb` - Entrenamiento práctico con datos reales (~30 min)
 
 ### 2. **Aplicación interactiva**
@@ -95,12 +95,8 @@ Nuestro modelo CNN alcanza:
 
 | Modelo | Precisión |
 |--------|-----------|
-| KNN | 72% |
-| Árbol de Decisión | 78% |
-| Regresión Logística | 82% |
-| SVM | 88% |
-| **CNN Personalizada** | **96.46%** |
-| ResNet18 (Transfer Learning) | 97.5% |
+| **CNN Personalizada** | **98,29%** |
+| ResNet18 (Transfer Learning) | 98.79% |
 
 ---
 
@@ -137,7 +133,7 @@ Nuestro modelo CNN alcanza:
 - No si usas Google Colab. Sí si lo haces localmente (Windows/Mac/Linux)
 
 **¿Cuánto tiempo toma?**
-- Notebook teórico: ~1 hora
+- Notebook teórico: ~30 min
 - Entrenamiento práctico: ~30 min (con GPU) o ~2 horas (CPU)
 
 ---
@@ -150,8 +146,8 @@ Este material está disponible bajo licencia MIT.
 
 ## 👨‍🏫 Autor
 
-**Prof. Carlos Floar**
-Taller de Deep Learning - Universidad [Tu Universidad]
+carlosfloar@gmail.com
+Taller de Deep Learning - Universidad Industrial de Santander
 
 ---
 
