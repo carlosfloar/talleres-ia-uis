@@ -1,0 +1,47 @@
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Streamlit
+.streamlit/
+
+# Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data
+*.csv
+*.parquet
+*.h5
+*.pkl
+*.pickle
+
+# Models
+*.pth
+*.pt
+*.model
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large files (uncomment if needed)
+# *.7z
+# *.zip
+# *.tar.gz
