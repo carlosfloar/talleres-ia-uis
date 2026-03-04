@@ -1,154 +1,65 @@
-# Deep Learning Workshop 🚀
+# Talleres de Inteligencia Artificial - UIS
 
-Taller introductorio de **Deep Learning** aplicado a la detección de enfermedades en plantas.
+Material de talleres prácticos de IA/ML para estudiantes de ingeniería.
+Universidad Industrial de Santander.
 
-## 📚 Contenido del taller
-
-Este repositorio contiene todo lo necesario para aprender Deep Learning desde cero:
-
-### 1. **Notebooks teóricos y prácticos** (`hojas/`)
-- `taller_cnn_plantas_colab.ipynb` - Introducción visual a las CNNs (30 min)
-- `entrenamiento_cnn_tomate.ipynb` - Entrenamiento práctico con datos reales (~30 min)
-
-### 2. **Aplicación interactiva**
-- `app_didactica_cnn.py` - App Streamlit con visualizaciones interactivas
-
-### 3. **Guías de ejecución**
-- `GUIA_EJECUCION_COLAB.txt` - Instrucciones para Google Colab (recomendado, sin instalación)
-- `GUIA_EJECUTAR_SCRIPT_PYTHON.txt` - Instrucciones para Windows local
+Cada taller tiene un notebook ejecutable en Google Colab.
 
 ---
 
-## 🎯 Objetivos de aprendizaje
+## Talleres
 
-Al completar este taller, entenderás:
+| # | Taller | Notebook | Abrir en Colab |
+|---|--------|----------|----------------|
+| 1 | **Perceptrón** — Clasificación de frutas | `perceptron/` | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carlosfloar/talleres-ia-uis/blob/main/perceptron/Perceptron_Frutas_Didactico.ipynb) |
+| 2 | **Descenso de Gradiente** — Encontrar la mejor recta | `descenso_gradiente/` | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carlosfloar/talleres-ia-uis/blob/main/descenso_gradiente/Descenso_Gradiente_Didactico.ipynb) |
+| 3 | **ADALINE** — Cancelación adaptativa de ruido (LMS/NLMS) | `adaline/` | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carlosfloar/talleres-ia-uis/blob/main/adaline/ADALINE_LMS_Filter.ipynb) |
+| 4 | **Deep Learning** — CNNs para diagnóstico de plantas | `deep_learning/` | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carlosfloar/talleres-ia-uis/blob/main/deep_learning/entrenamiento_cnn_tomate.ipynb) |
 
-- ✅ Cómo una computadora "ve" imágenes (píxeles, matrices, filtros)
-- ✅ Qué son las Redes Neuronales Convolucionales (CNNs)
-- ✅ Cómo entrena una red neuronal (gradientes, backpropagation)
-- ✅ Transfer Learning y modelos pre-entrenados
-- ✅ Aplicación práctica: diagnosticar enfermedades en hojas de plantas
+### Secuencia recomendada
 
----
+Perceptrón → Descenso de Gradiente → ADALINE → Deep Learning
 
-## 📊 Dataset
-
-**PlantVillage Dataset**
-- 54,305 imágenes de hojas etiquetadas
-- 14 tipos de plantas diferentes
-- 39 clases de enfermedades/salud
-
-En este taller usamos **10 clases de tomate** para entrenar desde cero.
+Cada taller construye sobre los conceptos del anterior: clasificación binaria → optimización → filtrado adaptativo → redes profundas.
 
 ---
 
-## 🚀 Inicio rápido
+## Inicio rápido
 
-### Opción 1: Google Colab (Recomendado - sin instalación)
-
-1. Abre este notebook en Colab:
-   - [taller_cnn_plantas_colab.ipynb](hojas/taller_cnn_plantas_colab.ipynb)
-2. Activa GPU en `Runtime → Change runtime type → GPU`
-3. ¡Ejecuta las celdas!
-
-### Opción 2: Python local (Windows)
-
-```bash
-# Clonar repositorio
-git clone https://github.com/carlosfloar/deep-learning-workshop.git
-cd deep-learning-workshop
-
-# Crear ambiente virtual
-python -m venv venv
-venv\Scripts\activate
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Ejecutar app Streamlit
-streamlit run app_didactica_cnn.py
-```
+1. Haz clic en el badge **"Open in Colab"** del taller que quieras
+2. En Colab: `Entorno de ejecución → Cambiar tipo de entorno` → GPU (para Deep Learning)
+3. Ejecuta las celdas en orden
 
 ---
 
-## 📖 Conceptos clave
+## Contenido por taller
 
-### CNNs (Convolutional Neural Networks)
-Redes diseñadas para procesar imágenes. Usan **filtros** que se deslizan sobre la imagen buscando patrones:
-- Primeras capas detectan **bordes**
-- Capas medias detectan **texturas**
-- Capas profundas reconocen **objetos completos**
+### 1. Perceptrón
+- Clasificador binario: ¿naranja o plátano?
+- Regla de aprendizaje del Perceptrón (Rosenblatt, 1958)
+- Frontera de decisión y convergencia
 
-### Transfer Learning
-Usar un modelo pre-entrenado (ResNet, VGG, etc.) como punto de partida, en lugar de entrenar desde cero. Ahorra tiempo y datos.
+### 2. Descenso de Gradiente
+- Regresión lineal con gradiente descendente
+- Visualización del paisaje de error
+- Efecto de la tasa de aprendizaje
 
-### Overfitting vs. Underfitting
-- **Underfitting**: modelo demasiado simple, no aprende
-- **Overfitting**: modelo memoriza en vez de generalizar
-- **Punto óptimo**: balance entre ambos
+### 3. ADALINE (Adaptive Linear Neuron)
+- Cancelación adaptativa de ruido (ANC)
+- Algoritmos LMS y NLMS (Widrow-Hoff, 1960)
+- Filtrado de ruido de motor en señal de audio
 
----
-
-## 📈 Resultados
-
-Nuestro modelo CNN alcanza:
-
-| Modelo | Precisión |
-|--------|-----------|
-| **CNN Personalizada** | **98,29%** |
-| ResNet18 (Transfer Learning) | 98.79% |
+### 4. Deep Learning
+- Redes Neuronales Convolucionales (CNNs)
+- Transfer Learning con ResNet18
+- Diagnóstico de enfermedades en hojas de tomate (PlantVillage)
+- App interactiva Streamlit (`deep_learning/app_didactica_cnn.py`)
 
 ---
 
-## 📚 Referencias
+## Autores
 
-**Paper base del taller:**
-> Geetharamani, G., & Arun Pandian, J. (2019). Identification of plant leaf diseases using a nine-layer deep convolutional neural network. *Computers & Electrical Engineering*, 76, 323–338.
+- **Ph.D, M.Sc Carlos Borrás Pinilla** — Universidad Industrial de Santander
+- **M.Sc Carlos Alberto Flórez Arias** — carlosfloar@gmail.com
 
-**Otros recursos útiles:**
-- [Fast.ai - Practical Deep Learning](https://www.fast.ai/)
-- [PyTorch Tutorials](https://pytorch.org/tutorials/)
-- [PlantVillage Dataset](https://github.com/spMohanty/PlantVillage-Dataset)
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-- **Python 3.8+**
-- **PyTorch** - Framework de Deep Learning
-- **Jupyter/Colab** - Notebooks interactivos
-- **Streamlit** - Web app interactiva
-- **Matplotlib/Plotly** - Visualización
-- **Scikit-learn** - Métricas de evaluación
-
----
-
-## 💬 Preguntas frecuentes
-
-**¿Necesito GPU?**
-- Para el notebook teórico: No, funciona en CPU
-- Para entrenar modelos: Sí, es mucho más rápido. Google Colab T4 es gratuito ✅
-
-**¿Necesito instalar Python?**
-- No si usas Google Colab. Sí si lo haces localmente (Windows/Mac/Linux)
-
-**¿Cuánto tiempo toma?**
-- Notebook teórico: ~30 min
-- Entrenamiento práctico: ~30 min (con GPU) o ~2 horas (CPU)
-
----
-
-## 📝 Licencia
-
-Este material está disponible bajo licencia MIT.
-
----
-
-## 👨‍🏫 Autor
-
-carlosfloar@gmail.com
-Taller de Deep Learning - Universidad Industrial de Santander
-
----
-
-*Última actualización: Febrero 2026*
+*Última actualización: Marzo 2026*
