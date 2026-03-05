@@ -1,6 +1,6 @@
 # Talleres de Inteligencia Artificial - UIS
 
-Material de talleres prácticos de IA/ML para estudiantes de ingeniería.
+Material de talleres prácticos de IA/ML para estudiantes de pregrado.
 Universidad Industrial de Santander.
 
 Cada taller tiene un notebook ejecutable en Google Colab.
